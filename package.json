@@ -1,0 +1,16 @@
+{
+  "name": "sala-juntas",
+  "version": "1.0.0",
+  "description": "Herramienta temporal para reservar sala de juntas",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init": "wrangler d1 create sala-juntas-db",
+    "db:migrate": "wrangler d1 execute sala-juntas-db --file migrations/001_init.sql"
+  },
+  "dependencies": {
+    "wrangler": "^3.20.0"
+  }
+}
